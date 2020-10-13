@@ -6,11 +6,13 @@
 }
 
 body {
-  background: #fff;
+  background: #2c2c54;
+  background: linear-gradient(180deg, #2c2c54 0%, #b33939 100%);
+  background-attachment: fixed;
   font-family: "Source Sans Pro", sans-serif;
-  color: #444;
+  color: #ffb142;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
 }
 
@@ -20,6 +22,7 @@ body {
 }
 
 .section-title {
+  text-align: center;
   font-size: 22px;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
@@ -29,7 +32,7 @@ body {
 .section-title span {
   text-transform: none;
   font-weight: 400;
-  color: #777777;
+  color: #ffdba8;
 }
 
 /* Layout */
@@ -50,11 +53,13 @@ body {
 }
 
 .sidebar, .posts {
-  background: #fff;
+  background: #40407a;
+  background: linear-gradient(0deg, rgba(64, 64, 122, 0.560662) 97%, #cd6133 100%);
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid #444;
-  border-radius: 5px;
+  border: 3px solid #ffb142;
+  border-radius: 30px;
+  position: relative;
 }
 
 /* Logo */
@@ -64,6 +69,7 @@ body {
   font-size: 104px;
   line-height: 1;
   text-align: center;
+  color: #ffb142;
 }
 
 /* Lists */
@@ -81,18 +87,30 @@ body {
   display: inline-block;
 }
 
+a {
+  color: #ffb142;
+}
+
 /* Authors */
 .authors li {
   margin-bottom: 12px;
 }
 
 /* Post */
+article {
+  position: absolute;
+}
+
 .post {
-  display: none;
+  position: absolute;
+  opacity: 0%;
+  display: block;
 }
 
 .post.active {
-  display: block;
+  opacity: 100%;
+  transition: opacity 2s;
+  z-index: 1;
 }
 
 .post-author {

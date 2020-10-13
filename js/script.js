@@ -14,7 +14,7 @@ function titleClickHandler(event){
   /* add class 'active' to the clicked link */
   console.log('clickedElement:' + clickedElement);
   clickedElement.classList.add('active');
-  
+
   /* remove class 'active' from all articles */
   const activeArticles = document.querySelectorAll('.posts article.active');
 
@@ -52,16 +52,16 @@ console.log('utworzono stała o nazwie titleList, która wybiera wszystkie title
   /* for each article */
   const articles = document.querySelectorAll(optArticleSelector); //*'.posts article'
   console.log('utworzono stała articles, która skanuje po kolei kazdy article i zapisuje go do zmiennej')
-  
+
   let html = '';
 
   for(let post of articles){
-  console.log('w petli dla kazdego post w article') 
-    
+  console.log('w petli dla kazdego post w article')
+
      /* get the article id */
      const articleId = post.getAttribute('id');
      console.log('pobieram id z kazdego article')
-    
+
      /* find the title element */
      const titleElement = post.querySelector(optTitleSelector);
      console.log('znajduje title w kazdym article')
@@ -73,7 +73,7 @@ console.log('utworzono stała o nazwie titleList, która wybiera wszystkie title
      /* create HTML of the link */
      const HTML = '<li><a href="#' + articleId + '"><span>' + titleValue + '</span></a></li>';
      console.log('utworzono stala html która tworzy linijke listy, wartość atrybutu href to stała: ' + articleId + ' z dodanym tytułem: ' + titleValue);
-    
+
      /* insert link into html variable */
      html = html + HTML;
      console.log('zmienna html, po każdym obrocie petli dodaje nowy link jesli sie pojawił')
@@ -92,3 +92,4 @@ const links = document.querySelectorAll('.titles a');
 for(let link of links){
   link.addEventListener('click', titleClickHandler);
 }
+
