@@ -39,8 +39,8 @@ body {
   font-weight: 600;
   span {
     text-transform: none;
-    font-weight: 400;
-    color: lighten($color-dark, 20%);
+    font-weight: 800;
+    color: lighten($color-light, 20%);
   }
 }
 
@@ -66,7 +66,7 @@ body {
   padding: 40px;
   border: 3px solid $color-dark;
   border-radius: 30px;
-  position: relative;
+
 }
 
 /* Logo */
@@ -90,7 +90,7 @@ body {
     font-weight: bold;
   }
 }
-
+.
 .list-horizontal {
   li {
     display: inline-block;
@@ -98,7 +98,14 @@ body {
   }
 
   a {
-    color: $color-dark; 
+    color: $color-dark;
+    text-decoration: none;
+  }
+
+  a:hover {
+      transform: scale(1.2);
+      font-size: 19px;
+      transition: all 1s;
   }
 
 /* Authors */

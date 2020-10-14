@@ -35,6 +35,11 @@ body {
   color: #ffdba8;
 }
 
+.section-title span :hover {
+  transform: scale(1.2);
+  transition: all 1s;
+}
+
 /* Layout */
 .wrapper {
   display: -ms-flexbox;
@@ -89,6 +94,7 @@ body {
 
 a {
   color: #ffb142;
+  text-decoration: none;
 }
 
 /* Authors */
