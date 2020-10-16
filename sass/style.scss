@@ -40,7 +40,7 @@ body {
   span {
     text-transform: none;
     font-weight: 800;
-    color: lighten($color-light, 20%);
+    color: #ffffff;
   }
 }
 
@@ -117,13 +117,9 @@ body {
 }
 
 /* Post */
-article {
-  position: absolute;
-}
+
 .post {
-  position: absolute;
   opacity: 0%;
-  display: block;
 
   &.active {
     opacity: 100%;
