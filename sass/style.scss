@@ -18,7 +18,6 @@ $font-text: 'Source Sans Pro', sans-serif;
 body {
   background: rgb(44,44,84);
   background: linear-gradient(180deg, rgba(44,44,84,1) 0%, rgba(179,57,57,1) 100%);
-
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
@@ -121,9 +120,16 @@ a:hover {
 
 /* Post */
 
+article  {
+  display: none;
+
+  &.active {
+    display: contents;
+  }
+}
+
 .post {
   opacity: 0%;
-
 
   &.active {
     opacity: 100%;
@@ -141,5 +147,8 @@ a:hover {
 
   p {
     margin: 0 10px 0 0;
-  }
+}
+a {
+  margin: 0 5px;
+}
 }

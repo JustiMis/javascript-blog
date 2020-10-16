@@ -103,6 +103,14 @@ a:hover {
 }
 
 /* Post */
+article {
+  display: none;
+}
+
+article.active {
+  display: contents;
+}
+
 .post {
   opacity: 0%;
 }
@@ -124,5 +132,9 @@ a:hover {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+.post-tags a {
+  margin: 0 5px;
 }
 /*# sourceMappingURL=style.css.map */
