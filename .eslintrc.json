@@ -3,6 +3,9 @@
         "browser": true,
         "es6": true
     },
+    "globals": {
+      "Handlebars": false
+    },
     "extends": "eslint:recommended",
     "parserOptions": {
         "ecmaVersion": 2015
