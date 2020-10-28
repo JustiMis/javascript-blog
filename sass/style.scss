@@ -162,14 +162,15 @@ article  {
 
 /* Tags cloud */
 
- .tags {
+.tags {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 30px;
-  margin-left: -45px;
- }
+  margin-bottom: 40px;
+  margin-left: -40px;
+  margin-top: 40px;
+}
 
- .tags {
+.tags {
   li {
     display: inline;
   }
@@ -179,6 +180,7 @@ article  {
   font-size: 25px;
   margin: 10px;
 }
+
 .tag-size-5:hover {
   font-size: 27px;
   transform: scale(1.2);
@@ -189,6 +191,7 @@ article  {
   font-size: 22px;
   margin: 20px;
 }
+
 .tag-size-4:hover {
   font-size: 24px;
   transform: scale(1.2);
@@ -199,6 +202,7 @@ article  {
   font-size: 20px;
   margin: 15px;
 }
+
 .tag-size-3:hover {
   font-size: 22px;
   transform: scale(1.2);
@@ -208,6 +212,7 @@ article  {
 .tag-size-2 {
   font-size: 18px;
 }
+
 .tag-size-2:hover {
   font-size: 20px;
   transform: scale(1.2);
@@ -217,7 +222,12 @@ article  {
 .tag-size-1 {
   font-size: 15px;
   position: absolute;
+  margin: -15px;
+  padding: 10px;
+  margin-left: 15px;
+  line-height: 0.75;
 }
+
 .tag-size-1:hover {
   font-size: 17px;
   transform: scale(1.2);

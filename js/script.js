@@ -1,11 +1,11 @@
 'use strict';
 
 const templates = {
-  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
-  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML)
-  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML)
+  articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML),
+  tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
+  authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
   tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML)
-}
+};
 
 /* WYŚWIETLANIE ARTYKUŁU PO KLIKNIĘCIU */
 
@@ -144,7 +144,7 @@ function generateTags(){
       /* generate HTML of the link */
       const HTMLData = {id: articleTags, title: tag};
       const HTML = templates.tagLink(HTMLData);
-       //const HTML = '<li><a href="#tag-' + tag + '"> ' + tag + ' </a></li>';
+      //const HTML = '<li><a href="#tag-' + tag + '"> ' + tag + ' </a></li>';
       console.log('utworzono stala html która tworzy linijke listy, wartość atrybutu href #tag-: ' + tag + ' i tagiem: ' + tag);
 
       /* add generated code to html variable */
@@ -259,8 +259,8 @@ function generateAuthors(){
       onlyAuthors.push(author);
     }
     /* generate HTML of the link */
-     HTMLData = {id: author, title: author};
-   const HTML = templates.authorLink(HTMLData);
+    const HTMLData = {id: author, title: author};
+    const HTML = templates.authorLink(HTMLData);
     //const HTML = '<a href="#author-' + author + '"> ' + author + ' </a>';
     console.log('utworzono stala html która tworzy linijke listy, wartość atrybutu href #tag-: ' + author + ' i tagiem: ' + author);
 
@@ -272,7 +272,7 @@ function generateAuthors(){
   const authorsList = document.querySelector('.list.authors');
   for( let author of onlyAuthors){
     const authorHTML = '<li><a href="#author-' + author + '">' + author + '</a></li>';
-    html = authorHTML + html
+    html = authorHTML + html;
   }
   authorsList.innerHTML = html;
 }
