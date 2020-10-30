@@ -142,7 +142,7 @@ function generateTags(){
     for(let tag of articleTagsArray){
 
       /* generate HTML of the link */
-      const HTMLData = {id: articleTags, title: tag};
+      const HTMLData = {id: tag, title: tag};
       const HTML = templates.tagLink(HTMLData);
       //const HTML = '<li><a href="#tag-' + tag + '"> ' + tag + ' </a></li>';
       console.log('utworzono stala html która tworzy linijke listy, wartość atrybutu href #tag-: ' + tag + ' i tagiem: ' + tag);
@@ -218,7 +218,7 @@ function tagClickHandler(event){
 
 function addClickListenersToTags(){
   /* find all links to tags */
-  const tags = document.querySelectorAll('.list-horizontal a');
+  const tags = document.querySelectorAll('.list-horizontal a, .list.tags a');
 
   /* START LOOP: for each link */
   for(let tag of tags){
@@ -228,7 +228,7 @@ function addClickListenersToTags(){
   }
 }
 
-addClickListenersToTags();
+
 
 
 //* DODANIE AUTORA DO ARTYKUŁU *//
@@ -330,7 +330,7 @@ function authorClickHandler(event){
 
 function addClickListenersToAuthors(){
   /* find all links to authors */
-  const authors = document.querySelectorAll('.post-author a');
+  const authors = document.querySelectorAll('.post-author a .authors a');
 
   /* START LOOP: for each link */
   for(let author of authors){
@@ -445,3 +445,5 @@ function generateTagsCloud(){
   console.log(allTagsData);
 }
 generateTagsCloud();
+
+addClickListenersToTags();
